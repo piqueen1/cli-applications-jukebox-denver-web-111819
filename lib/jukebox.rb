@@ -1,3 +1,5 @@
+require "pry"
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -30,12 +32,17 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   chosen = gets.strip
+  chosen_regexp = Regexp.new chosen
+  #binding.pry
   
-  if chosen.to_i && chosen.to_i < songs.count
-    name = songs[chosen.to_i]
-    elsif songs.include?(chosen)
-    name = chosen
+  if chosen.to_i && chosen.to_i <= songs.count
+    name = Regexp.new songs[chosen.to_i]
+    elsif songs.include?(chosen_regexp)
+    name = chosen_regexp
   end
+  
+  #binding.pry
+  puts name
 end
 
 def list(songs)
