@@ -32,15 +32,14 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   chosen = gets.strip
-  chosen_regexp = Regexp.new chosen
   #binding.pry
   
-  if chosen.to_i && chosen.to_i <= songs.count
+  if chosen.to_i && chosen.to_i <= songs.length
     puts "Playing #{songs[chosen.to_i-1]}"
     return
   end
   
-  if songs.include?(chosen_regexp.to_s)
+  if songs.include?(chosen)
     binding.pry
     puts "Playing #{chosen}"
     return chosen
@@ -63,3 +62,5 @@ end
 
 def run
 end
+
+play("Phoenix - 1901")
