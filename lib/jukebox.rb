@@ -69,13 +69,17 @@ def run
     
     if command == "help"
       help
+      break
     elsif command == "play"
       play
+      break
     elsif command == "list"
       list
+      break
     elsif command = "exit"
       exit_jukebox
     end
+  while command != "exit"
     
 end
 
