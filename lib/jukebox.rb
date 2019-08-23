@@ -78,9 +78,9 @@ def run
       break
     elsif command = "exit"
       exit_jukebox
+      break
     end
-  while command != "exit"
-    
+  end
 end
 
 #play(songs)
