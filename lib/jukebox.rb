@@ -77,8 +77,6 @@ def run(songs)
       break
     end
   end
-  
-  exit_jukebox
 end
 
 #play(songs)
