@@ -34,13 +34,13 @@ def play(songs)
   chosen = gets.strip
   #binding.pry
   
-  if (chosen.to_i.class == integer) && (chosen.to_i <= songs.length)
+  if chosen.to_i <= songs.length && chosen.to_i > 0
     puts "Playing #{songs[chosen.to_i-1]}"
     return
   end
   
   if songs.include?(chosen)
-    binding.pry
+    #binding.pry
     puts "Playing #{chosen}"
     return chosen
   end
