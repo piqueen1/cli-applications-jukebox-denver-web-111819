@@ -36,8 +36,8 @@ def play(songs)
   #binding.pry
   
   if chosen.to_i && chosen.to_i <= songs.count
-    name = Regexp.new songs[chosen.to_i]
-    puts "Playing #{songs[chosen.to_i]}"
+    name = Regexp.new songs[chosen.to_i-1]
+    puts "Playing #{songs[chosen.to_i-1]}"
   end
   
   if songs.include?(chosen_regexp)
