@@ -63,7 +63,7 @@ end
 
 def run
   
-  do
+  loop do
     puts "Please enter a command:"
     command = gets.strip
     
