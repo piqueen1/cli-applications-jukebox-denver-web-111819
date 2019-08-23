@@ -58,6 +58,8 @@ end
 # @numbers.each_with_index{|number, i| puts "#{i}: #{number}"}
 
 def exit_jukebox
+  puts "Goodbye"
+  return
 end
 
 def run
